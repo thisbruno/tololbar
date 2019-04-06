@@ -1,32 +1,19 @@
 <template>
 <v-app>
-  <Landing/> 
-
-
   <v-toolbar fixed height="73" id="thenabar" class="cyan lighten-3 thenavbar" >
-  <!-- <a @click="goToXXX" class="d-flex ml-2"> -->
+  <a @click="goToXXX" class="d-flex ml-2">
   <img src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-300.png" height="100%" width="65px">
    <v-toolbar-title>Brunow</v-toolbar-title>
   <v-spacer></v-spacer>
    <v-btn flat router to="/skills" class="primary">SKILLs</v-btn> 
     </v-toolbar>
     
-
-  <About />
-  <MoreAbout />
 </v-app>
 </template>
 
 <script>
-import Landing from '../views/Landing.vue'
-import About from '../views/About.vue'
-import MoreAbout from '../views/MoreAbout.vue'
-import Nav from '../components/ElasticNav.vue'
 
   export default {
-    components: {
-       Landing , About , MoreAbout, Nav
-    },
     mounted() {
       this.$nextTick(() => {
           $('.thenavbar').hide()
